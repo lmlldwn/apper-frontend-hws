@@ -22,12 +22,3 @@ function transform(values){
 
 
 
-////////// forEach was not implemented because return doesn't break the loop
-
-// values.forEach((item, index) => {
-//   if ( !Number.isInteger(item)){
-//     console.log("Invalid datatype was passed.")
-//     return
-//   }
-//   console.log(item, index)
-// })
