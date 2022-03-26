@@ -13,8 +13,12 @@ class Stack{
     }
 
     push(value) {
+        if ( typeof(value) !== "string" ) {
+          console.log("The stack only accepts string values.")
+          return
+        }
+      
         let node = new Node(value)
-
         if(!this.first) {
             this.first = node
             this.last = node
@@ -30,9 +34,9 @@ class Stack{
     }
 
     pop(){
-        if (!this.first)
+        if (this.isStackEmpty())
             return null
-
+        
         let temp = this.first
 
         if (this.first == this.last) {
@@ -40,13 +44,15 @@ class Stack{
         }
 
         this.first = this.first.next
-
         this.size--
 
         return temp.value
     }
 
     check() {
+        if (this.isStackEmpty()) 
+            return null
+        
         let checkNodes = this.first
         do {
             console.log(checkNodes.value)
@@ -54,8 +60,18 @@ class Stack{
         }while (checkNodes)
     }
 
-    peek(){
+    peek() {
+        if (this.isStackEmpty()) 
+            return null
+
         return this.first.value
+    }
+    isStackEmpty() {
+        if (!this.first) {
+            console.log("Stack is empty. Nothing to do.")
+            return true
+        }
+        return false
     }
 }
 

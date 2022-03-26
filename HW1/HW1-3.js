@@ -1,5 +1,5 @@
 function reverse(value) {
-    if (! (typeof(value) === "string"))
+    if ( typeof(value) !== "string")
         return
     
     let characterArray = value.split('')
