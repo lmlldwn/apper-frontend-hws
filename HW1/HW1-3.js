@@ -1,6 +1,6 @@
 function reverse(value) {
     if ( typeof(word) !== "string") {
-        console.log("Only string values will be processed by this function.")
+        console.log("Only string values will be processed by the function.")
         return
     }
     

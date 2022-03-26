@@ -1,6 +1,6 @@
 function convertToVowels(word) {
     if ( typeof(word) !== "string") {
-        console.log("Only string inputs are accepted")
+        console.log("Only string values will be processed by the function.")
         return
     }
     let wordVowels = []
