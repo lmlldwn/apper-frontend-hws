@@ -1,6 +1,8 @@
 function reverse(value) {
-    if ( typeof(value) !== "string")
+    if ( typeof(word) !== "string") {
+        console.log("Only string values will be processed by this function.")
         return
+    }
     
     let characterArray = value.split('')
     let reverseArray = characterArray.reverse()

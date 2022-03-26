@@ -1,4 +1,8 @@
 function convertToVowels(word) {
+    if ( typeof(word) !== "string") {
+        console.log("Only string inputs are accepted")
+        return
+    }
     let wordVowels = []
 
     let letters = word.split('')
